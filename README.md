@@ -36,12 +36,60 @@ The script `data_prepare.py` handles:
 ## Model Architecture: Transfer Learning with ResNet50
 The model is implemented using **PyTorch** and **ResNet50** for transfer learning.
 
+### Model Summary
+The model architecture is based on **ResNet50**, with the final fully connected layer modified to classify **34 electronic components**. Here is a summary of the architecture:
+```
+ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace=True)
+  (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (layer1): Sequential(...)
+  (layer2): Sequential(...)
+  (layer3): Sequential(...)
+  (layer4): Sequential(...)
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): Linear(in_features=2048, out_features=34, bias=True)
+)
+```
+
 ### Training Process
 The `train.py` script includes:
 ✔ Loading the preprocessed dataset
 ✔ Applying data augmentation
 ✔ Fine-tuning **ResNet50** for component classification
 ✔ Training and evaluating the model
+
+## Model Performance
+The model achieved an **overall accuracy of 91%** on the test set. Here are key performance metrics:
+- **Precision (macro avg):** 0.92
+- **Recall (macro avg):** 0.91
+- **F1-score (macro avg):** 0.91
+
+### Training Metrics
+The training process was completed in **2 epochs**, with the following performance:
+- **Epoch 1:**
+  - Train Loss: **0.4745**
+  - Train Accuracy: **86.07%**
+  - Validation Loss: **0.3556**
+  - Validation Accuracy: **89.51%**
+  - ✅ Model saved!
+
+- **Epoch 2:**
+  - Train Loss: **0.1684**
+  - Train Accuracy: **94.72%**
+  - Validation Loss: **0.2814**
+  - Validation Accuracy: **91.68%**
+
+### Category-wise Performance
+Some notable class-wise F1-scores:
+- **Fiber Optic Cables:** 1.00
+- **LED Character and Numeric:** 0.99
+- **Mica and PTFE Capacitors:** 0.99
+- **Batteries (Rechargeable):** 0.81
+- **Motors (AC/DC):** 0.73
+
+For a detailed breakdown of precision, recall, and F1-scores for each component category, see `classification_report.txt`.
 
 ## Model Inference
 To classify an image, the `test.py` script:
@@ -73,14 +121,5 @@ To classify an image, the `test.py` script:
    python test.py --image path/to/image.jpg
    ```
 
-## Future Enhancements
-- Improve accuracy with additional data augmentation techniques
-- Experiment with different architectures (EfficientNet, ViT, etc.)
-- Deploy as a web app for real-time classification
-
-## License
-This project is for research and educational purposes. Please ensure compliance with dataset usage policies.
-
 ## Acknowledgments
 Thanks to Digi-Key for providing access to component data and images.
-

@@ -1,0 +1,40 @@
+                                                                 precision    recall  f1-score   support
+
+                               Capacitors_aluminum_electrolytic       0.91      0.99      0.95       300
+                                   analog_multipliers__dividers       0.95      0.96      0.95       120
+                                              automotive_relays       0.90      0.97      0.94       300
+                           batteries_non_rechargeable__primary_       0.91      0.78      0.84       150
+                             batteries_rechargeable__secondary_       0.73      0.91      0.81       210
+                                               circuit_breakers       0.88      0.87      0.88       300
+                                             fiber_optic_cables       1.00      1.00      1.00       300
+                                                fixed_inductors       0.91      0.90      0.91       300
+                                                    fuseholders       0.74      0.74      0.74       300
+                                                          fuses       0.73      0.94      0.82       300
+                          instrumentation__op_amps__buffer_amps       0.99      0.90      0.94       300
+isolation_transformers_and_autotransformers__step_up__step_down       1.00      0.95      0.97       252
+                                      led_character_and_numeric       1.00      0.99      0.99       300
+                                       mica_and_ptfe_capacitors       0.99      0.99      0.99       300
+                                                motors___ac__dc       0.88      0.62      0.73       288
+                                                    multimeters       0.95      0.92      0.94       180
+                                                         pliers       0.95      0.99      0.97       300
+                                   power_supplies__test__bench_       0.94      0.94      0.94       294
+                                            pushbutton_switches       0.82      0.76      0.79       300
+                                                rocker_switches       0.98      0.73      0.83       300
+                               rotary_potentiometers__rheostats       0.92      0.97      0.95       300
+                                                rotary_switches       0.94      0.95      0.94       270
+                                     single_bipolar_transistors       0.88      0.98      0.93       300
+                                                  single_diodes       0.89      0.94      0.92       300
+                                                    solar_cells       0.87      0.95      0.91       204
+                                                 stepper_motors       0.96      0.90      0.93       288
+                                                  strain_gauges       0.99      0.96      0.98       186
+                                         through_hole_resistors       0.94      0.89      0.91       300
+                                                toggle_switches       0.88      0.96      0.92       300
+                                                       tweezers       0.93      0.95      0.94       294
+                             ultrasonic_receivers__transmitters       0.93      0.85      0.89       288
+                                                     usb_cables       0.92      0.96      0.94       300
+                                       video_cables__dvi__hdmi_       0.94      0.95      0.95       294
+                                                       wrenches       0.96      0.88      0.92       198
+
+                                                       accuracy                           0.91      9216
+                                                      macro avg       0.92      0.91      0.91      9216
+                                                   weighted avg       0.91      0.91      0.91      9216

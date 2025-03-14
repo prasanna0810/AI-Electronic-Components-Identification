@@ -107,4 +107,4 @@ if __name__ == "__main__":
     model = model.to(device)
 
     # Train the model
-    model = train_model(model, train_loader, valid_loader, epochs=20)
+    model = train_model(model, train_loader, valid_loader, epochs=2)
